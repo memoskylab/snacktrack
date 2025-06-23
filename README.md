@@ -40,7 +40,7 @@ SnackTrack is a simple terminal-based food ordering system built in C++ for our 
 - [x] Register customer to file
 - [x] Place order with subtotal + grand total
 - [x] Save order to file
-- [x] Feedback system with rating + comment
+- [ ] Feedback system with rating + comment
 - [ ] Report generation (in progress)
 - [ ] UI polishing & input validation
 
