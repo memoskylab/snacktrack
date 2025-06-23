@@ -52,8 +52,8 @@ SnackTrack is a simple terminal-based food ordering system built in C++ for our 
 |---------------------------------|-----------------------|
 | Hilmi                           | Functional            |
 | Mohammad Aslam Bin Azman        | Developer             |
-| Khuzairi                        | Developer             |
-| Taufiq                          | QA                    |
+| Taufiq                          | Developer             |
+| Khuzairi                        | QA                    |
 
 ---
 
