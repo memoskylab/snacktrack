@@ -9,7 +9,7 @@ SnackTrack is a simple terminal-based food ordering system built in C++ for our 
 - Practice **structured programming** using `struct`, `functions`, and arrays
 - Implement **file I/O** to store and retrieve data (`customer.txt`, `order.txt`, `feedback.txt`)
 - Provide a simple **menu-driven interface** for users
-- Collaborate as a group using **GitHub**, **CLion**, and proper project management practices
+- Collaborate as a group using **GitHub**, **CLion**, **Visual Studio Code** and proper project management practices
 
 ---
 
@@ -50,10 +50,10 @@ SnackTrack is a simple terminal-based food ordering system built in C++ for our 
 
 | Name                            | Role                  |
 |---------------------------------|-----------------------|
-| Mohammad Aslam Bin Azman        | Project Lead          |
-| Member A                        | Backend Developer     |
-| Member B                        | UI & Output Formatter |
-| Member C                        | QA & Documentation    |
+| Hilmi                           | Functional            |
+| Mohammad Aslam Bin Azman        | Developer             |
+| Khuzairi                        | Developer             |
+| Taufiq                          | QA                    |
 
 ---
 
