@@ -34,29 +34,6 @@ SnackTrack is a simple terminal-based food ordering system built in C++ for our 
 
 ---
 
-## 📁 Project Structure
-
-SnackTrack/
-├── src/
-│ ├── main.cpp
-│ ├── menu.cpp
-│ ├── order.cpp
-│ ├── customer.cpp
-│ └── feedback.cpp
-├── include/
-│ ├── menu.h
-│ ├── order.h
-│ ├── customer.h
-│ └── feedback.h
-├── data/
-│ ├── customer.txt
-│ ├── order.txt
-│ └── feedback.txt
-├── CMakeLists.txt
-└── README.md
-
----
-
 ## 🚧 Current Progress
 
 - [x] Basic main menu navigation
