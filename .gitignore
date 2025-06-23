@@ -1,0 +1,19 @@
+# Ignore build files and folders
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+*.cmake
+
+# Ignore binaries and logs
+*.o
+*.obj
+*.exe
+*.out
+*.log
+
+# Ignore CLion IDE config
+.idea/
+
+# Ignore macOS system files
+.DS_Store

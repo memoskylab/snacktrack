@@ -1,0 +1,38 @@
+--- List of Customer Information ---
+
+Name : Mohammad Aslam Bin Azman
+Address : No.31 Jalan Setia Permai U13/43A, 40170 Shah Alam, Selangor
+Phone Number : 011-35565285
+
+Name : Mustaqim Bin Mohd Azman
+Address : No.44, Jalan Puchong, 41150 Shah Alam, Selangor
+Phone Number : 017-37786374
+
+Name : Shahmi Lop Bin Kuzhairi
+Address : No.11, Jalan Baiduri U23/33A, 55680 Shah Alam, Selangor
+Phone Number : 011-57580394
+
+Name : Nurul Zulaika Osman
+Address : No.22, Jalan Tanjung Malim, 40185 Puncak Alam, Selangor
+Phone Number : 014-48573829
+Name : Ali Bin Abu
+Address : Taman Abu Bakar, Jalan Industri No.31-D23, 40170 Shah Alam, Selangor
+Phone Number : 011-5768948
+Name : Mohammad Aslam Bin Azman
+Address : No.31, Jalan Setia Permai U13/43A, 40170 Shah Alam, Selangor
+Phone Number : 011-35565285
+Name : Mohammad Aslam Bin Azman
+Address : Pangsapuri No.31-D-20, Jalan Makmur, 40170 Shah Alam, Selangor
+Phone Number : 011-3356756
+Name : Mohammad Aslam Bin Azman
+Address : Jalan Sungai Petani
+Phone Number : 011-35565285
+Name : Mohammad Aslam Bin Azman
+Address : Taman Maznah
+Phone Number : 011-35565285
+Name : Aslam
+Address : A
+Phone Number : 01135565285
+Name : Mohammad Aslam Bin Azman
+Address : No.31 Jalan Setia
+Phone Number : 011-35565285
