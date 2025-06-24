@@ -3,6 +3,7 @@
 #include "../include/customer.h"
 #include "../include/menu.h"
 #include "../include/order.h"
+#include "../include/feedback.h"
 
 using namespace std;
 
@@ -36,6 +37,16 @@ int main() {
                     cin.get();
                 } else {
                     placeOrder(currentCustomerInfo.name);
+                }
+                break;
+                case 4:
+                if (currentCustomerInfo.name.empty()) {
+                    cout << "\nOpps. It seem you havent register as customer. Please choose option 1 to register first\n";
+                    cout << "Please click enter to continue...";
+                    cin.ignore();
+                    cin.get();
+                } else {
+                    insertFeedback(currentCustomerInfo.name);
                 }
                 break;
             default:
