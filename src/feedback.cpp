@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "../include/feedback.h"
 
 
@@ -46,6 +47,40 @@ void insertFeedback(const string &customerName) {
     cout << "Your rating is : " << provideFeedback[0].rating << endl;
     cout << "Your comment is : " << provideFeedback[0].comment << endl;
 
-    cout << "\nplease click enter to return to main menu...";
+    fstream inputFeedbackFile("../data/feedback.txt", ios::app);
+    if (inputFeedbackFile.is_open()) {
+        inputFeedbackFile << "Customer Name : " << provideFeedback[0].name << endl;
+        inputFeedbackFile << "Customer Rating : " << provideFeedback[0].rating << endl;
+        inputFeedbackFile << "Customer Comment : " << provideFeedback[0].comment << endl;
+        inputFeedbackFile << endl;
+        inputFeedbackFile.close();
+
+        cout << "\nYour feedback successful save\n";
+        cout << "Please click enter to return to main menu...";
+        cin.get();
+    }
+    else {
+        cout << "\nSomething when wrong, unable to save order feeedback.";
+    }
+
+}
+
+void displayFeedback() {
+    ifstream feedbackFile("../data/feedback.txt");
+    string feedbackCustomer;
+
+    if (feedbackFile.is_open()) {
+        cout << "\n----- List of feedback -----\n";
+        cout << endl;
+        while (getline(feedbackFile, feedbackCustomer)) {
+            cout << feedbackCustomer << endl;
+        }
+        feedbackFile.close();
+    } else {
+        cout << "There was an error opening the file." << endl;
+    }
+
+    cout << "\nPlease click enter to return to main menu...";
+    cin.ignore();
     cin.get();
 }

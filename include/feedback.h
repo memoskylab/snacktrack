@@ -17,5 +17,6 @@ struct Feedback {
 };
 
 void insertFeedback(const string &customerName);
+void displayFeedback();
 
 #endif //FEEDBACK_H

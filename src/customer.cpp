@@ -32,7 +32,6 @@ CustomerInfo registerCustomer() {
         cout << "\nCustomer information save successfully\n";
 
         cout << "\nPlease Enter to return to main menu...";
-        cin.ignore();
         cin.get();
 
     } else {

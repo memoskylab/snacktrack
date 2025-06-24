@@ -49,6 +49,9 @@ int main() {
                     insertFeedback(currentCustomerInfo.name);
                 }
                 break;
+                case 5:
+                displayFeedback();
+                break;
             default:
                 cout << "Invalid Choice!\n";
         }
