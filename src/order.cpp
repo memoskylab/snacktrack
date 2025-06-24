@@ -2,6 +2,7 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
+#include <fstream>
 #include "../include/order.h"
 #include "../include/menu.h"
 
@@ -19,7 +20,7 @@ void placeOrder(const string &customerName) {
     int menuSize = getMenuSize();
     displayMenu(false); // this will show menu without pause
 
-    cout << "\n would like to place an order? Please type 'yes' to continue or 'no' to cancel :";
+    cout << "\n would like to place an order? Please type 'yes' to continue or 'no' to cancel : ";
     cin.ignore();
     getline(cin, input);
 
@@ -31,17 +32,44 @@ void placeOrder(const string &customerName) {
     while (true) {
         int itemIndex, qty;
 
-        cout << "\nEnter item number (1 - " << menuSize << "): ";
-        cin >> itemIndex;
+        while (true) {
+            cout << "\nEnter item number (1 - " << menuSize << "): ";
+            cin >> itemIndex;
 
-        if (itemIndex < 1 || itemIndex > menuSize) {
-            cout << "Invalid item number. Please try again.\n";
-            cin.ignore();
-            continue;
+            if (cin.fail()) {
+                cin.clear();
+                cout << "\nInvalid input. Please try again";
+                cin.ignore(1000, '\n');
+                cin.get();
+            } else if (itemIndex < 1 || itemIndex > menuSize) {
+                cin.clear();
+                cout << "\nItem number must be greater than 0. Please try again";
+                cin.ignore(1000, '\n');
+                cin.get();
+            } else {
+                break;
+            }
         }
 
+    while (true) {
         cout << "Enter quantity : ";
         cin >> qty;
+
+        if (cin.fail()) {
+            cin.clear();
+            cout << "\nInvalid input. Please try again";
+            cin.ignore(1000, '\n');
+            cin.get();
+        } else if (qty < 1 || qty > qty) {
+            cin.clear();
+            cout << "\nQuantity must be greater than 0. Please try again";
+            cin.ignore(1000, '\n');
+            cin.get();
+        } else {
+            break;
+        }
+    }
+
         cin.ignore();
 
         //Populate order item
@@ -78,4 +106,21 @@ void placeOrder(const string &customerName) {
     cout << "=======================================\n";
     cout << "Total: RM" << fixed << setprecision(2) << total << endl;
 
+    // Write to order.txt
+    ofstream outFile("../data/orders.txt", ios::app);
+    if (outFile.is_open()) {
+        outFile << "--- Order Summary ---\n";
+        for (int i = 0; i < orderCounts; i++) {
+            outFile << i + 1 << ". " << orders[i].itemName << " x" << orders[i].quantity
+            << " RM" << fixed << setprecision(2) << orders[i].subtotal << endl;
+        }
+        outFile << "Total: RM" << fixed << setprecision(2) << total << endl << endl;
+        outFile.close();
+        cout << "\nSuccessful save order\n";
+    } else {
+        cout << "\nFailed to save order, please contact developer for assistant.\n";
+    }
+
+    cout << "\nPresee enter to return to main menu...";
+    cin.get();
 }

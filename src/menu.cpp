@@ -9,11 +9,11 @@ using namespace std;
 const int MENU_SIZE = 5;
 
 static string menuItems[MENU_SIZE] = {
-    "Nasi Lemak",
-    "Nasi Ayam Gepuk",
-    "Chicken Chop Premium",
-    "Nasi Goreng Chili Padi",
-    "Nasi Singapore Original",
+    "01. Nasi Lemak",
+    "02. Nasi Ayam Gepuk",
+    "03. Chicken Chop Premium",
+    "04. Nasi Goreng Chili Padi",
+    "05. Nasi Singapore Original",
 };
 
 static float menuPrices[MENU_SIZE] = {

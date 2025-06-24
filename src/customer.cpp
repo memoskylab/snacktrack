@@ -29,7 +29,7 @@ CustomerInfo registerCustomer() {
         customerFile << "Address : " << customerInfo.address << endl;
         customerFile << "Phone Number : " << customerInfo.phone << endl;
         customerFile.close();
-        cout << "Customer information save successfully \n";
+        cout << "\nCustomer information save successfully \n";
 
         cout << "\nPlease Enter to return to main menu...";
         cin.ignore();
