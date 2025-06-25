@@ -13,5 +13,6 @@ struct OrderItem {
 };
 
 void placeOrder(const string &customerName);
+int getNextOrder();
 
 #endif //ORDER_H

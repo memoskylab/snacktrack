@@ -8,9 +8,29 @@
 
 using namespace std;
 
+int getNextOrder() {
+    ifstream nextOrderFile("../data/order_ID.txt");
+    int id = 0;
+
+    if (nextOrderFile >> id) {
+
+    }
+
+    nextOrderFile.close();
+
+    id += 1;
+
+    ofstream overWriteOrderFile("../data/order_ID.txt");
+    overWriteOrderFile << id;
+    overWriteOrderFile.close();
+
+    return id;
+}
+
+
 void placeOrder(const string &customerName) {
     OrderItem orders[10];
-    string orderSummary[10][3];
+    string orderSummary[10][5];
     int orderCounts = 0;
     float total = 0.0;
     string input;
@@ -93,6 +113,66 @@ void placeOrder(const string &customerName) {
         if (input.empty()) break;
     }
 
+
+    // Get Order ID from another function
+    int orderID = getNextOrder();
+
+    // Convert Interger to String
+    ostringstream orderIDStream;
+    orderIDStream << setw(4) << setfill('0') << orderID;
+    string formatNewOrderID = orderIDStream.str();
+
+    // Display Order Summary
+    cout << "\n=========== Order Summary ==============\n";
+    cout << "Order ID: " << formatNewOrderID << endl;
+    cout << "Customer Name : " << customerName << endl;
+    cout << "----------------------------------------\n";
+    cout << left << setw(30) << "Item"
+         << right << setw(6) << "Quantity"
+         << right << setw(12) << "Subtotal" << endl;
+    cout << "----------------------------------------\n";
+
+    for (int i = 0; i < orderCounts; i++) {
+        cout << left << setw(30) << orderSummary[i][0] << setw(12) << orderSummary[i][1]
+        << setw(12) << orderSummary[i][2] << endl;
+    }
+    cout << "----------------------------------------\n";
+    cout << right << setw(42) << "Total: RM" << fixed << setprecision(2) << total << endl;
+    cout << "========================================\n";
+
+    // Write the file
+    ofstream outFile ("../data/order.txt", ios::app);
+
+    if (outFile.is_open()) {
+        outFile << "\n=========== ORDER SUMMARY ==============\n";
+        outFile << "Order ID: " << formatNewOrderID << endl;
+        outFile << "Customer Name: " << customerName << endl;
+        outFile << "----------------------------------------\n";
+        outFile << left << setw(30) << "Item"
+                << right << setw(6) << "Quantity"
+                << right << setw(12) << "Subtotal" << endl;
+        outFile << "----------------------------------------\n";
+
+        for (int i = 0; i < orderCounts; i++) {
+            outFile << left << setw(30) << orderSummary[i][0]
+            << setw(12) << orderSummary[i][1]
+            << setw(12) << orderSummary[i][2] << endl;
+        }
+
+        outFile << "----------------------------------------\n";
+        outFile << right << setw(42) << "Total: RM" << fixed << setprecision(2) << total << endl;
+        outFile << "========================================\n";
+        outFile.close();
+
+        cout << "\nSuccessful save the file\n";
+    } else {
+        cout << "\nFailed to open order file.\n";
+    }
+
+    cout << "\nPlease press enter to reutn to main menu..";
+    cin.get();
+}
+/*
     // Display Order Summary
     cout << "\n=========== Order Summary ===========\n";
     cout << left << setw(30) << "Item" << setw(10) << "Quantity" << setw(15) << "Subtotal (RM)" << endl;
@@ -109,8 +189,12 @@ void placeOrder(const string &customerName) {
     // Write to order.txt
     ofstream outFile("../data/orders.txt", ios::app);
     if (outFile.is_open()) {
+        int orderID = getNextOrder();
+
         outFile << "--- Order Summary ---\n";
         for (int i = 0; i < orderCounts; i++) {
+
+            outFile << left << setw(5) << setfill('0') << orderID << endl;
             outFile << i + 1 << ". " << orders[i].itemName << " x" << orders[i].quantity
             << " RM" << fixed << setprecision(2) << orders[i].subtotal << endl;
         }
@@ -124,3 +208,5 @@ void placeOrder(const string &customerName) {
     cout << "\nPresee enter to return to main menu...";
     cin.get();
 }
+
+*/

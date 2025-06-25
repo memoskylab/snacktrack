@@ -4,6 +4,7 @@
 #include "../include/menu.h"
 #include "../include/order.h"
 #include "../include/feedback.h"
+#include "../include/report.h"
 
 using namespace std;
 
@@ -39,7 +40,7 @@ int main() {
                     placeOrder(currentCustomerInfo.name);
                 }
                 break;
-                case 4:
+            case 4:
                 if (currentCustomerInfo.name.empty()) {
                     cout << "\nOpps. It seem you havent register as customer. Please choose option 1 to register first\n";
                     cout << "Please click enter to continue...";
@@ -49,8 +50,14 @@ int main() {
                     insertFeedback(currentCustomerInfo.name);
                 }
                 break;
-                case 5:
+            case 5:
                 displayFeedback();
+                break;
+            case 6:
+                generateReport();
+                break;
+            case 7:
+                cout << "\nThank you for using snacktrack online food. Existing the system...\n";
                 break;
             default:
                 cout << "Invalid Choice!\n";

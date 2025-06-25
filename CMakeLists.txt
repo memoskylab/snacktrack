@@ -12,4 +12,6 @@ add_executable(SnackTrack src/main.cpp
         include/order.h
         src/feedback.cpp
         include/feedback.h
+        src/report.cpp
+        include/report.h
 )
