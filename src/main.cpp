@@ -21,14 +21,18 @@ int main() {
                 "\n5. View Feedback\n6. Generate report\n7. Exit\n";
         cout << endl;
         cout << "Enter your choice: ";
-        cin >> choice;
+        while (!(cin >> choice) || choice < 1 || choice > 7) {
+            cin.clear();
+            cout << "\nInvalid choice, please enter number in between 1 and 7: ";
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
 
         switch (choice) {
             case 1:
                 currentCustomerInfo = registerCustomer();
                 break;
             case 2:
-                displayMenu(); // This for test purpose
+                displayMenu();
                 break;
             case 3:
                 if (currentCustomerInfo.name.empty()) {
@@ -54,13 +58,14 @@ int main() {
                 displayFeedback();
                 break;
             case 6:
-                generateReport();
+                showAllOrders();
+                generateOrderSummary();
                 break;
             case 7:
                 cout << "\nThank you for using snacktrack online food. Existing the system...\n";
                 break;
             default:
-                cout << "Invalid Choice!\n";
+                cout << "\nInvalid Choice!\n";
         }
     } while (choice != 7);
 }

@@ -14,7 +14,7 @@ using namespace std;
 // Get Customer Information
 CustomerInfo registerCustomer() {
     CustomerInfo customerInfo;
-    cout << "Please Enter your name: ";
+    cout << "\nPlease Enter your name: ";
     cin.ignore();
     getline(cin, customerInfo.name);
     cout << "Please Enter your address: ";
@@ -28,6 +28,7 @@ CustomerInfo registerCustomer() {
         customerFile << "Name : " << customerInfo.name << endl;
         customerFile << "Address : " << customerInfo.address << endl;
         customerFile << "Phone Number : " << customerInfo.phone << endl;
+        customerFile << endl;
         customerFile.close();
         cout << "\nCustomer information save successfully\n";
 

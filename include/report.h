@@ -5,6 +5,7 @@
 
 using namespace std;
 
-void generateReport();
+void showAllOrders();
+void generateOrderSummary();
 
 #endif //REPORT_H

@@ -36,6 +36,7 @@ SnackTrack is a simple terminal-based food ordering system built in C++ for our 
 ## 📁 File Structure
 
 ```
+
 SnackTrack/
 │
 ├── .gitignore              # Git ignore rules
@@ -91,5 +92,3 @@ SnackTrack/
 ## 📝 Notes
 
 > This project is part of a university assignment. While it's designed for learning, we welcome ideas, feedback, and contributions within the team. 🚀
-
-

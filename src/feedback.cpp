@@ -43,8 +43,7 @@ void insertFeedback(const string &customerName) {
     provideFeedback[0].rating = rating;
 
     cout << "\n --- Hey " << customerName << " thanks for feedback ---\n";
-    cout << "Here is your feedback\n";
-    cout << "Your rating is : " << provideFeedback[0].rating << endl;
+    cout << "\nYour rating is : " << provideFeedback[0].rating << endl;
     cout << "Your comment is : " << provideFeedback[0].comment << endl;
 
     fstream inputFeedbackFile("../data/feedback.txt", ios::app);
@@ -56,7 +55,7 @@ void insertFeedback(const string &customerName) {
         inputFeedbackFile.close();
 
         cout << "\nYour feedback successful save\n";
-        cout << "Please click enter to return to main menu...";
+        cout << "\nPlease click enter to return to main menu...";
         cin.get();
     }
     else {
