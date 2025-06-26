@@ -47,7 +47,6 @@ SnackTrack/
 │   ├── feedback.txt
 │   ├── order.txt
 │   ├── order_ID.txt
-│   └── orders.txt
 │
 ├── include/                # Header files for each module
 │   ├── customer.h
@@ -72,9 +71,9 @@ SnackTrack/
 - [x] Register customer to file
 - [x] Place order with subtotal + grand total
 - [x] Save order to file
-- [ ] Feedback system with rating + comment (in progress)
-- [ ] Report generation (in progress)
-- [ ] UI polishing & input validation (not started)
+- [x] Feedback system with rating + comment
+- [x] Generate Reporting
+- [ ] UI polishing & input validation (in progress)
 
 ---
 
