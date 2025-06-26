@@ -33,6 +33,37 @@ SnackTrack is a simple terminal-based food ordering system built in C++ for our 
 - Structured programming using `struct`, 1D & 2D arrays
 
 ---
+## 📁 File Structure
+
+```
+SnackTrack/
+│
+├── .gitignore              # Git ignore rules
+├── README.md               # Project documentation
+│
+├── data/                   # Text files to store persistent data
+│   ├── customer.txt
+│   ├── feedback.txt
+│   ├── order.txt
+│   ├── order_ID.txt
+│   └── orders.txt
+│
+├── include/                # Header files for each module
+│   ├── customer.h
+│   ├── feedback.h
+│   ├── menu.h
+│   ├── order.h
+│   └── report.h
+│
+└── src/                    # Source files for each module
+    ├── customer.cpp
+    ├── feedback.cpp
+    ├── main.cpp            # Main entry point of the program
+    ├── menu.cpp
+    ├── order.cpp
+    └── report.cpp
+```
+---
 
 ## 🚧 Current Progress
 
@@ -40,7 +71,7 @@ SnackTrack is a simple terminal-based food ordering system built in C++ for our 
 - [x] Register customer to file
 - [x] Place order with subtotal + grand total
 - [x] Save order to file
-- [x] Feedback system with rating + comment
+- [ ] Feedback system with rating + comment (in progress)
 - [ ] Report generation (in progress)
 - [ ] UI polishing & input validation (not started)
 
