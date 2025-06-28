@@ -80,7 +80,7 @@ void placeOrder(const string &customerName) {
             cout << "\nInvalid input. Please try again";
             cin.ignore(1000, '\n');
             cin.get();
-        } else if (qty < 1 || qty > qty) {
+        } else if (qty < 1) {
             cin.clear();
             cout << "\nQuantity must be greater than 0. Please try again";
             cin.ignore(1000, '\n');
