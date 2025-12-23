@@ -73,7 +73,6 @@ SnackTrack/
 - [x] Save order to file
 - [x] Feedback system with rating + comment
 - [x] Generate Reporting
-- [ ] UI polishing & input validation (in progress)
 
 ---
 
